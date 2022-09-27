@@ -1,24 +1,3 @@
-console.log("JS file executed");
-
-const request = new XMLHttpRequest();
-request.open("GET","https://restcountries.com/v3.1/all",true);
-request.send(null);
-request.onload = function(){
-    var response = JSON.parse(request.responseText);
-    console.log(response);
-
-
-  
-// for (var i=0;i<response.length;i++)
-// {
-//     console.log(response[i].flag);
-//     console.log(response[i].languages);
-// }
-response.forEach(function(country) {
-    console.log(country.name);
-    console.log(country.region);
-    console.log(country.subregion);
-    console.log(country.population);
-});
-
-}
+var obj1={name:"person 1",age:5 };
+var obj2={age:5,name:"person 1"};
+console.log(_.isEqual(obj1,obj2));
